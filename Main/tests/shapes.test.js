@@ -4,7 +4,7 @@ describe('Shapes', () => {
 
     describe('triangle render', () => {
         it('should render the svg shape code applied to it in the svg file', () => {
-            const testShape = new Shapes.triangle();
+            let testShape = new Shapes.triangle();
             testShape.setColor("blue");
             expect(testShape.render()).toEqual(`<polygon points="250 15, 500 400, 0 400" fill="blue"></polygon>`);
         })

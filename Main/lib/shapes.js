@@ -22,7 +22,6 @@ class shape {
     }
     setColor(newCol) {
         this.col = newCol;
-        console.log(this.col)
     }
 
 }
@@ -30,27 +29,39 @@ class shape {
 class square extends shape {
     constructor(text = "SVG", textCol = "white", col = "green") {
         super(text, textCol, col)
-        this.form = `<rect x="0" y="0" width="500" height="500" stroke="black" fill="${col}" stroke-width="1"></rect>`
+        this.form = `<rect x="0" y="0" width="500" height="500" stroke="black" fill="${this.col}" stroke-width="1"></rect>`
+    }
+    setColor(newCol) {
+        this.col = newCol;
+        this.form = `<rect x="0" y="0" width="500" height="500" stroke="black" fill="${this.col}" stroke-width="1"></rect>`
     }
 }
 //<rect x="0" y="0" width="500" height="500" stroke="black" fill="green" stroke-width="1"></rect>
 class circle extends shape {
     constructor(text = "SVG", textCol = "white", col = "green") {
         super(text, textCol, col)
-        this.form = `<circle cx="250" cy="250" r="250" stroke="black" fill="${col}" stroke-width="1"></circle>`
+        this.form = `<circle cx="250" cy="250" r="250" stroke="black" fill="${this.col}" stroke-width="1"></circle>`
+    }
+    setColor(newCol) {
+        this.col = newCol;
+        this.form = `<circle cx="250" cy="250" r="250" stroke="black" fill="${this.col}" stroke-width="1"></circle>`
     }
 }
 
 class triangle extends shape {
     constructor(text = "SVG", textCol = "white", col = "green") {
         super(text, textCol, col)
-        this.form = `<polygon points="250 15, 500 400, 0 400" fill="${col}"></polygon>`
+        this.form = `<polygon points="250 15, 500 400, 0 400" fill="${this.col}"></polygon>`
+    }
+    setColor(newCol) {
+        this.col = newCol;
+        this.form = `<polygon points="250 15, 500 400, 0 400" fill="${this.col}"></polygon>`
     }
 }
 
-const testShape = new triangle
+const testShape = new triangle()
 testShape.setColor('blue')
-console.log(triangle.col)
+console.log(testShape.col)
 
 module.exports = {
     shape,
