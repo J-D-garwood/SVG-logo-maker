@@ -65,3 +65,17 @@ inquirer
       err ? console.log(err) : console.log('Successfully created index.html!')
     );
   });
+
+  <svg width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g>
+      <circle cx="250" cy="250" r="250" fill="red"></circle>
+      <text x="80" y="300" font-family="Times New Roman" font-size="160" fill="white">poo</text>
+  </g>
+      </svg>
+  
+  <!--if 3 characters
+      <circle cx="250" cy="250" r="250" fill="red"></circle>
+      <text x="75" y="300" font-family="Verdana" font-size="160" fill="white">SVG</text>
+  
+  
+  -->

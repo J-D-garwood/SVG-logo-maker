@@ -4,10 +4,11 @@ const shapes = require('../Main/lib/shapes.js')
 
 const generateSVG = (shape) => 
     `<svg width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      ${shape.render()}
+    <g>
+    ${shape.render()}
+    ${shape.displaytext()}
+    </g>
     </svg>`;
-
-
 inquirer
     .prompt([
         {
@@ -47,5 +48,5 @@ inquirer
         const pageContent = generateSVG(newshape)
 
         fs.writeFile('./examples/logo.svg', pageContent, (error) =>
-        error ? console.log(error) : console.log('Successfully created logo.html!'))
+        error ? console.log(error) : console.log('Successfully created logo.svg!'))
     })
