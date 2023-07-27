@@ -12,7 +12,13 @@ class shape {
         return this.form
     }
     displaytext() {
-        return `<text x="75" y="300" font-family="Times New Roman" font-size="160" fill="${this.textCol}">${this.text}</text>`
+        if (this.text.length===3) {
+            return `<text x="75" y="300" font-family="Times New Roman" font-size="160" fill="${this.textCol}">${this.text}</text>`
+        } else if (this.text.length===2) {
+            return `<text x="115" y="300" font-family="Times New Roman" font-size="160" fill="${this.textCol}">${this.text}</text>`
+        } else {
+            return `<text x="190" y="300" font-family="Times New Roman" font-size="160" fill="${this.textCol}">${this.text}</text>`
+        }
     }
     setColor(newCol) {
         this.col = newCol
@@ -37,7 +43,7 @@ class circle extends shape {
 class triangle extends shape {
     constructor(text, textCol, col) {
         super(text, textCol, col)
-        this.form = `<polygon points="200 15, 400 400, 0 400" fill="${col}"></polygon>`
+        this.form = `<polygon points="250 15, 500 400, 0 400" fill="${col}"></polygon>`
     }
 }
 
