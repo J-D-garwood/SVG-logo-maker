@@ -6,7 +6,7 @@ describe('Shapes', () => {
         it('should render the svg shape code applied to it in the svg file', () => {
             let testShape = new Shapes.triangle();
             testShape.setColor("blue");
-            expect(testShape.render()).toEqual(`<polygon points="250 15, 500 400, 0 400" fill="blue"></polygon>`);
+            expect(testShape.render()).toEqual(`<polygon points="150 15, 280 160, 20 160" fill="blue"></polygon>`);
         })
     })
 
@@ -14,10 +14,16 @@ describe('Shapes', () => {
         it('should render the svg shape code applied to it in the svg file', () => {
             let testShape = new Shapes.circle();
             testShape.setColor("brown");
-            expect(testShape.render()).toEqual(`<circle cx="250" cy="250" r="250" stroke="black" fill="brown" stroke-width="1"></circle>`);
+            expect(testShape.render()).toEqual(`<circle cx="150" cy="100" r="100" stroke="black" fill="brown" stroke-width="1"></circle>`);
         })
     })
 
-    describe('')
+    describe('square render', () => {
+        it('should render the svg shape code applied to it in the svg file', () => {
+            let testShape = new Shapes.square();
+            testShape.setColor("pink");
+            expect(testShape.render()).toEqual(`<rect x="40" y="20" width="220" height="160" stroke="black" fill="pink" stroke-width="1"></rect>`);
+        })
+    })
     //describe('triangle text displayed')
 })

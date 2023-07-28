@@ -3,13 +3,13 @@ const fs = require('fs');
 const shapes = require('../Main/lib/shapes.js')
 
 const generateSVG = (shape) => 
-    `
-<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+`<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <g>
         ${shape.render()}
         ${shape.displaytext()}
     </g>
 </svg>`;
+
 inquirer
     .prompt([
         {
