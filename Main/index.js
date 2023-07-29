@@ -5,22 +5,12 @@ const shapes = require('../Main/lib/shapes.js')
 
 const generateSVG = (shape) => 
 `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-    <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <g>
-            ${shape.render()}
-            ${shape.displaytext()}
-        </g>
-    </svg>
-</body>    
-</html>
+<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        ${shape.render()}
+        ${shape.displaytext()}
+    </g>
+</svg>
 `;
 
 
@@ -62,8 +52,8 @@ inquirer
     }).then((newshape) => {
         const pageContent = generateSVG(newshape)
 
-        fs.writeFile('./examples/logo.html', pageContent, (error) =>
-        error ? console.log(error) : console.log('Successfully created logo.svg!'))
+        fs.writeFile('./examples/logo.svg', pageContent, (error) =>
+        error ? console.log(error) : console.log('Generated logo.svg!'))
     })
 
     module.exports = {
