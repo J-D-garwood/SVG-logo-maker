@@ -31,4 +31,4 @@ N/a
 
 ## Video of functional application
 
-[App Demo](.Main/media)
+[App Demo](./Main/media/Demo.gif)
