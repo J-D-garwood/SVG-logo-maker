@@ -19,9 +19,10 @@ const generateSVG = (shape) =>
             ${shape.displaytext()}
         </g>
     </svg>
-</body>
+</body>    
 </html>
 `;
+
 
 inquirer
     .prompt([
