@@ -1,3 +1,4 @@
+//parent class -> shape
 class shape {
     constructor(text = "SVG", textCol = "white", col = "green") {
         if (text.length>3) {
@@ -8,9 +9,11 @@ class shape {
         this.col = col;
         this.form = ''
     }
+    //rendering shape function
     render() {
         return this.form
     }
+    //function to display text with positioning dependent on text length
     displaytext() {
         if (this.text.length===3) {
             return `<text x="55" y="130" font-family="Times New Roman" font-size="90" fill="${this.textCol}">${this.text}</text>`
@@ -20,12 +23,14 @@ class shape {
             return `<text x="117" y="130" font-family="Times New Roman" font-size="90" fill="${this.textCol}">${this.text}</text>`
         }
     }
+    //set color func.
     setColor(newCol) {
         this.col = newCol;
     }
 
 }
 
+//square child class constructor
 class square extends shape {
     constructor(text = "SVG", textCol = "white", col = "green") {
         super(text, textCol, col)
@@ -36,7 +41,8 @@ class square extends shape {
         this.form = `<rect x="40" y="20" width="220" height="160" stroke="black" fill="${this.col}" stroke-width="1"></rect>`
     }
 }
-//<rect x="0" y="0" width="500" height="500" stroke="black" fill="green" stroke-width="1"></rect>
+
+//circle child class constructor
 class circle extends shape {
     constructor(text = "SVG", textCol = "white", col = "green") {
         super(text, textCol, col)
@@ -48,6 +54,7 @@ class circle extends shape {
     }
 }
 
+//triangle child class constructor
 class triangle extends shape {
     constructor(text = "SVG", textCol = "white", col = "green") {
         super(text, textCol, col)
@@ -59,6 +66,7 @@ class triangle extends shape {
     }
 }
 
+//module exports for index.js and testing
 module.exports = {
     shape,
     square,
