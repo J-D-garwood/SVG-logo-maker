@@ -1,6 +1,7 @@
+
 <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <g>
-        <circle cx="150" cy="100" r="100" stroke="black" fill="bark" stroke-width="1"></circle>
-        <text x="55" y="130" font-family="Times New Roman" font-size="90" fill="white">XXX</text>
+        <polygon points="150 15, 280 160, 20 160" fill="grey"></polygon>
+        <text x="55" y="130" font-family="Times New Roman" font-size="90" fill="pink">SVG</text>
     </g>
 </svg>
